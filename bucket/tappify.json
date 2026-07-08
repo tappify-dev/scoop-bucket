@@ -1,24 +1,24 @@
 {
-    "version": "0.0.1",
-    "description": "Tappify CLI - Deploy and manage your Tappify applications",
-    "homepage": "https://github.com/tappify-dev/cli",
-    "license": "MIT",
-    "url": "https://registry.npmjs.org/@tappify/cli/-/cli-0.0.1.tgz",
-    "hash": "placeholder",
-    "depends": ["nodejs"],
-    "installer": {
-      "script": "npm install -g @tappify/cli@0.0.1"
-    },
-    "uninstaller": {
-      "script": "npm uninstall -g @tappify/cli"
-    },
-    "bin": "tappify",
-    "checkver": {
-      "url": "https://api.github.com/repos/tappify-dev/cli/releases/latest",
-      "jsonpath": "$.tag_name",
-      "regex": "v([\\d.]+)"
-    },
-    "autoupdate": {
-      "url": "https://registry.npmjs.org/@tappify/cli/-/cli-$version.tgz"
-    }
+  "version": "1.3.2",
+  "description": "Tappify CLI - Deploy and manage your Tappify applications",
+  "homepage": "https://github.com/tappify-dev/cli",
+  "license": "MIT",
+  "url": "https://registry.npmjs.org/@tappify/cli/-/cli-1.3.2.tgz",
+  "hash": "3e9d5fb4c9e64263cdf1086c574b8d6543f4b7900e678956fd85dd169d3422bb",
+  "depends": ["nodejs"],
+  "installer": {
+    "script": "npm install -g @tappify/cli@1.3.2"
+  },
+  "uninstaller": {
+    "script": "npm uninstall -g @tappify/cli"
+  },
+  "bin": "tappify",
+  "checkver": {
+    "url": "https://api.github.com/repos/tappify-dev/cli/releases/latest",
+    "jsonpath": "$.tag_name",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://registry.npmjs.org/@tappify/cli/-/cli-$version.tgz"
   }
+}
