@@ -1,24 +1,33 @@
 {
-    "version": "0.0.1",
-    "description": "Tappify CLI - Deploy and manage your Tappify applications",
-    "homepage": "https://github.com/tappify-dev/cli",
-    "license": "MIT",
-    "url": "https://registry.npmjs.org/@tappify/cli/-/cli-0.0.1.tgz",
-    "hash": "placeholder",
-    "depends": ["nodejs"],
-    "installer": {
-      "script": "npm install -g @tappify/cli@0.0.1"
+  "version": "1.7.0",
+  "description": "Tappify CLI - Deploy and manage your Tappify applications",
+  "homepage": "https://docs.tappify.ai",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/tappify-dev/cli-releases/releases/download/v1.7.0/tappify-win-x64.exe",
+      "hash": "8a7acd6cde5f75efc10b708849cb60f2d3f75608ff1235ee702b643785273a4a",
+      "bin": [["tappify-win-x64.exe", "tappify"]]
     },
-    "uninstaller": {
-      "script": "npm uninstall -g @tappify/cli"
-    },
-    "bin": "tappify",
-    "checkver": {
-      "url": "https://api.github.com/repos/tappify-dev/cli/releases/latest",
-      "jsonpath": "$.tag_name",
-      "regex": "v([\\d.]+)"
-    },
-    "autoupdate": {
-      "url": "https://registry.npmjs.org/@tappify/cli/-/cli-$version.tgz"
+    "arm64": {
+      "url": "https://github.com/tappify-dev/cli-releases/releases/download/v1.7.0/tappify-win-arm64.exe",
+      "hash": "78b4ed7b1dcfab8345088af952aeaf2387a0ff9c6a777c989f091fc6853c0f0e",
+      "bin": [["tappify-win-arm64.exe", "tappify"]]
+    }
+  },
+  "checkver": {
+    "url": "https://api.github.com/repos/tappify-dev/cli-releases/releases/latest",
+    "jsonpath": "$.tag_name",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/tappify-dev/cli-releases/releases/download/v$version/tappify-win-x64.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/tappify-dev/cli-releases/releases/download/v$version/tappify-win-arm64.exe"
+      }
     }
   }
+}
